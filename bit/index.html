@@ -1,0 +1,615 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="form.css">
+	<link href='http://fonts.googleapis.com/css?family=Armata|Kite+One|Roboto' rel='stylesheet' type='text/css'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+
+<script type="text/javascript" src="coin-slider.min.js"></script>
+	
+
+<script type="text/javascript">
+(function($){
+  $.fn.list_ticker = function(options){
+    
+    var defaults = {
+      speed:4000,
+	  effect:'slide'
+    };
+    
+    var options = $.extend(defaults, options);
+    
+    return this.each(function(){
+      
+      var obj = $(this);
+      var list = obj.children();
+      list.not(':first').hide();
+      
+      setInterval(function(){
+        
+        list = obj.children();
+        list.not(':first').hide();
+        
+        var first_li = list.eq(0)
+        var second_li = list.eq(1)
+		
+		if(options.effect == 'slide'){
+			first_li.slideUp();
+			second_li.slideDown(function(){
+				first_li.remove().appendTo(obj);
+			});
+		} else if(options.effect == 'fade'){
+			first_li.fadeOut(function(){
+				second_li.fadeIn();
+				first_li.remove().appendTo(obj);
+			});
+		}
+      }, options.speed)
+    });
+  };
+})(jQuery);
+</script>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+	<title>MI-IT 2013</title>
+
+
+
+</head>
+
+<body>
+<div class="wrapper">
+
+<div class="upper-decor-1"></div>
+<div class="upper-decor-2"></div>
+<div class="lower-decor-wrapper">
+<div class="heading-holder">
+<div class="ibm-wrapper">
+	<div class="ibm-holder"></div>
+		<div class="ibm-logo">
+		<div class="ibm-1">Sponsored by<br /></div>
+		<img src="http://www.ghs.com/news/images/ibm_logo_small.gif" /> <br />
+		<div class="ibm-2">IBM India, Bangalore</div>
+		</div>
+</div>
+<div class="logo-holder"><img src="bit_t.png" class="logo"/></div>
+<div class="title-holder">
+<div class="title-holder-1">Three Day &nbsp;National Level &nbsp;Workshop on</div>
+<br />
+<div class="title-holder-2">Machine Intelligence<br /> and<br /> Imaging Technologies</div>
+<br />
+<!--<div class="title-holder-3">and</div>
+<br />
+<div class="title-holder-4">Imaging Technologies</div>
+<br />-->
+<div class="title-holder-5">August 28 - 30, 2013<br />Bangalore, India</div>
+<br />
+<!--<div class="title-holder-6">Bangalore, India</div>
+<br />-->
+<div class="title-holder-org-small">Dept. of Computer Science and Engineering,<br /> Bangalore Institute of Technology, <br />K.R. Road, V.V. Puram, Bangalore - 560004</div>
+
+</div>
+
+<!--<div class="college-wrapper">
+<div class="college-holder">Organized by <br /><b>Department of<br /> Computer Science and Engineering, <br />Bangalore Institute of Technology,<br /> K.R. Road, V.V. Puram,<br /> Bangalore - 560004</b></div>
+</div>-->
+
+
+</div>
+
+<div class="tabs-holder">
+
+<div class="tab-title" id="tab1" style="margin-left: 25px;">Home</div><div class="tab-title" id="tab2">Registration</div><div class="tab-title" id="tab3">Speakers</div><div class="tab-title" id="tab4">Committee</div><div class="tab-title" id="tab5">About BIT</div><div class="tab-title" id="tab6">Contact us</div>
+</div>
+
+
+<div class="tabs" style="text-align:center">
+<ul id="news">
+	<li>Three Day National Level Workshop on <b>Machine Learning and Imaging Technologies.</b></li>
+	<li><b>August 28-30, 2013</b> at <b>Bangalore Institute of Technology, K.R. Road, V.V.Puram, Bangalore - 560004.</b></li>
+	<li>Last date for registration is <b>August 24th, 2013</b></li>
+	<li>Organized by <b>Dept. of Computer Science and Engineering, Bangalore Institute of Technology.</b></li>
+	<li>Sponsored by <b>IBM India, Bangalore.</b></li>
+	<li>Hands on MATLAB by HCL Technologies.</li>
+	<li>Hands on Data mining / Machine Intelligence by IBM.</li>
+</ul>
+</div>
+
+
+
+
+
+<div class="tab" id="tab1-content">
+<p></p>
+<h2>A National Level Workshop on Machine Intelligence and Imaging Technologies</h2>
+<p></p>
+
+
+<div id='coin-slider'>
+	    <a href="#">
+	        <img src='img/1.jpg'>
+	        <span>
+	            Machine Intelligence
+	        </span>
+	    </a>
+
+	    <a href="#">
+	        <img src='img/2.jpg'>
+	        <span>
+	           Medical Image Analysis
+	        </span>
+	    </a>
+
+	    <a href="#">
+	        <img src='img/3.jpg'>
+	        <span>
+	           Content based Image Retrieval
+	        </span>
+	    </a>
+
+	    <a href="#">
+	        <img src='img/4.jpg'>
+	        <span>
+	            Machine Intelligence
+	        </span>
+	    </a>
+	    
+	</div>
+
+<h3>Theme of the Workshop</h3>
+
+
+
+<p>The main theme of the workshop is to impart knowledge in the area of Machine Intelligence, which combines a wide variety of advanced technologies. It gives machines the ability to learn, adapt, make decisions, and display behaviors not explicitly programmed into their original capabilities. Machine Intelligence capabilities add powerful, analytical, self-tuning and adaptive behavior to applications.</p>
+
+<p>This workshop provides a platform for enhancing and exchanging knowledge of experts from academia, R&amp;D, and Industry in the area of Machine Intelligence and Imaging Technologies.</p>
+
+<h3>Scope of the Workshop</h3>
+
+<p>This workshop covers the following topics
+<ul>
+<li>Computer Vision</li>
+<li>Pattern Analysis and Recognition</li>
+<li>Machine learning</li>
+<li>Medical Image Analysis</li>
+<li>Content-based Image retrieval</li>
+<li>Recent trends in Data mining and Analysis</li>
+</ul>
+
+</p>
+<h2 style="text-align: center;">Hands on MATLAB by HCL Technologies and Data mining/Machine Intelligence by IBM.</h2>
+<p></p>
+<h3>Date and Venue</h3>
+<p>
+	<p>Date : <b>August 28-30, 2013</b></p>
+	<p>Venue : <b>Seminar Hall, BIT Main Block</b></p>
+</p>
+<h3>Target Participants</h3>
+<ul>
+<li>Faculty from Engineering college</li>
+<li>Delegates from Industry</li>
+<li>UG and PG students of CSE/ISE</li>
+</ul>
+
+<p></p>
+</div>
+<div class="tab" id="tab2-content">
+<p></p>
+<h2>Registration Instructions</h2>
+<p></p>
+<h3>Registration fee</h3>
+<table>
+<tr><td><b>Industry participants</b></td><td>Rs. 2000/-</td></tr>
+<tr><td><b>Academicians</b></td><td>Rs. 1000/-</td></tr>
+<tr><td><b>Students</b></td><td>Rs. 500/-</td></tr>
+</table>
+<h3>How to Register?</h3>
+<p> Participants are requested to register by filling the <a href="#" onclick="$('html, body').animate({scrollTop: $('#register').offset().top-50}, 500);">registration form</a>. Registration fee includes course material, lunch and refreshments. Participants have to make their own arrangements for stay and travel. No TA/DA will be paid to the participants.</p>
+<p>DD to be drawn in favour of <b>"e-odyssey"</b> payable at Bangalore.<b> The last date for registration is 24th August, 2013.</b></p>
+<h2>Registration form</h2>
+<p></p>
+
+
+<form id="register">
+<div class="form-wrapper">
+<h2 style="text-align: center; margin-left: 300px;">Personal Details</h2>
+    <br />
+    <input type="hidden" name="action" value="register" />
+   <div class="ipholder"> <label for="name">Name</label><input type="text" id="name" name="name" class="ipbox" placeholder="Your name"></div><br />
+   <div class="ipholder"> <label for="designation">Designation</label><input type="text" id="designation" name="designation" class="ipbox" placeholder="Your designation"></div><br />
+   <div class="ipholder"> <label for="department">Department</label><input type="text" id="department" name="department" class="ipbox" placeholder="Your department"></div><br />
+    <div class="ipholder"> <label for="institution">Institution</label><input type="text" id="institution" name="institution" class="ipbox" placeholder="Your Institution"></div><br />
+    <div class="ipholder"> <label for="address">Mailing address</label><textarea id="address" name="address" rows="5" cols="25" placeholder="Your address" class="ipbox"></textarea></div><br />
+    <div class="ipholder"> <label for="phone">Mobile</label><input type="text" id="phone" name="phone" class="ipbox" placeholder="Your mobile number"></div><br />
+    <div class="ipholder"> <label for="email">E-mail</label><input type="text" id="email" name="email" class="ipbox" placeholder="Your E-mail address"></div><br />
+    <h2 style="text-align: center; margin-left: 300px;">DD Details</h2>
+    <br />
+    <div class="ipholder"> <label for="ddamount">DD Amount(Rs.)</label><input type="text" id="ddamount" name="ddamount" class="ipbox" placeholder="DD Amount in Rupees"></div><br />
+
+    <div class="ipholder"> <label for="ddno">DD No.</label><input type="text" id="ddno" name="ddno" class="ipbox" placeholder="Your DD number"></div><br />
+    <div class="ipholder"> <label for="dddate">DD Date</label><input type="text" id="dddate" name="dddate" class="ipbox" placeholder="DD Date as DD/MM/YYYY"></div><br />
+    <div class="ipholder"> <label for="ddbank">Name of the Bank</label><input type="text" id="ddbank" name="ddbank" class="ipbox" placeholder="DD Bank"></div><br />
+    <div class="ipholder"><button type="submit" class="submitButton" onclick="validateForm(); return false;" id="regSubmit">Submit</button></div><br />
+</div>
+</form>
+          
+          
+
+
+</div>
+<div class="tab" id="tab3-content">
+
+<p></p>
+<h2>Speakers for MI-IT 2013</h2>
+<p></p>
+<h3>Keynote speech</h3>
+<p><b>Dr. Venugopal K.R., </b>Principal, UVCE, Bangalore.</p>
+
+<h3>Technical Resource persons</h3>
+<p><b>Dr. S. Natarajan, </b>Professor, Dept. of ISE, PESIT, Bangalore.</p>
+<p><b>Dr. H.N. Suma, </b>Professor and Head, Medical Electronics, BMSCE, Bangalore.</p>
+<p><b>Dr. Amudha J., </b>Dept. of CSE, Amrita School of Engineering, Bangalore.</p>
+<p><b>Dr. J. Bharatheesh Simha, </b>Chief Technology Officer, ABIBA Systems, Bangalore.</p>
+<p><b>Dr. Dinesh R., </b>HCL Technologies, Bangalore.</p>
+<p><b>Mr. Srinivas Gowda, </b>IBM India, Bangalore.</p>
+<p><b>Mr. Lakshminarayanan Sreenivasan, </b>IBM India, Bangalore.</p>
+<p>Also experts from other Multi-National Companies and Academic Institutions.</p>
+<p></p>
+</div>
+<div class="tab" id="tab4-content">
+<p></p>
+<h2>Committee</h2>
+<p></p>
+<h3>Chief Patron</h3>
+<p><b>Shri. B. Kenchappa Gowda, </b>President, V.S.</p>
+<p><b>Dr. K. Mahadev, </b>General Secretary, V.S.</p>
+<p><b>Shri. N. Ramesh, </b>Treasurer, V.S.</p>
+<p><b>Shri. S. Krishnappa, </b>Chairman(UG), GC, BIT.</p>
+<h3>Co-Patron</h3>
+<p><b>Shri. C. Manjunath, </b>Working President, V.S.</p>
+<p><b>Shri. H.L. Shivanna, </b>Vice President, V.S.</p>
+<p><b>Prof. K. Mallaiah, </b>Vice President, V.S.</p>
+<p><b>Shri. Auditor Nagaraj Yalachawadi, </b>Assistant Secretary, V.S.</p>
+<p><b>Shri. B.R. Vasudev, </b>Chairman(PG), GC, BIT.</p>
+<h3>Chairman</h3>
+<p><b>Dr. K.R. Suresh, </b>Principal, BIT.</p>
+<h3 id="coordinators">Convener</h3>
+<p><b>Dr. S. Nandagopalan, </b>Professor and Head, Department of CSE, BIT. <br />(+91 9845251144) </p>
+<h3>Coordinators</h3>
+<p><b>Dr. Asha T. </b>(9880511358)</p>
+<p><b>Prof. T. Vijaya Kumar </b>(9449656593)</p>
+<p><b>Prof. J. Girija </b>(9880937557)</p>
+<p><b>Prof. B.N. Shankar Gowda </b>(9902984984)</p>
+<p><b>Prof. S. Keshava Murthy </b>(9480334282)</p>
+<h3>Address for Communication</h3>
+<p><b>Mrs. Hemavathi P.,</b><br />
+Assistant Professor,<br />
+Dept. of Computer Science and Engineering,<br />
+Bangalore Institute of Technology,<br />
+K.R. Road, V.V. Puram, Bangalore - 560004.<br />
+Phone : 9845696399<br />
+E-mail: bitmiit2013@gmail.com
+</p>
+<p></p>
+</div>
+<div class="tab" id="tab5-content">
+	<p></p>
+<h2>About BIT</h2>
+<p></p>
+
+<div id='coin-slider-bit'>
+	    <a href="#">
+	        <img src='http://bit-bangalore.edu.in/wp-content/uploads/2012/07/DSC_0865-554x341.jpg'>
+	        <span>
+	            Bangalore Institute of Technology
+	        </span>
+	    </a>
+
+	    <a href="#">
+	        <img src='http://bit-bangalore.edu.in/wp-content/uploads/2012/08/DSC_1014-554x341.jpg'>
+	        <span>
+	           Bangalore Institute of Technology
+	        </span>
+	    </a>
+
+	    <a href="#">
+	        <img src='http://bit-bangalore.edu.in/wp-content/uploads/2012/07/DSC_10191-554x341.jpg'>
+	        <span>
+	           Bangalore Institute of Technology
+	        </span>
+	    </a>
+
+	    <a href="#">
+	        <img src='http://bit-bangalore.edu.in/wp-content/uploads/2012/07/DSC_10201-554x341.jpg'>
+	        <span>
+	            Bangalore Institute of Technology
+	        </span>
+	    </a>
+	    
+	</div>
+
+<p></p>
+<h3>Bangalore Institute of Technology</h3>
+
+
+
+
+<p>Bangalore Institute of Technology came into existence in August 1979, under the auspices of Vokkaligara Sangha, Bangalore. The institute is provided with the necessary modern infrastructural facilities. BIT has highly qualified and experienced teachers. The college is affiliated to Visvesvaraya Technological University and accredited by National Board of Accreditation, New Delhi. The institute offers 9 undergraduate, 6 post graduate and research centers for carrying out Ph.D degree with an overall student strength of over 4000. The institute has tie up with other organizations like IISc, NAL, ISRO for carrying out inter disciplinary research and collaborative programmes.</p>
+<h3>Department of Computer Science and Engineering</h3>
+<p>The Computer Science &amp; Engineering department was started in the year 1981 with the mission to impart high quality education. The department is accredited by NBA, New Delhi for the second time and has been granted with permanent affiliation by VTU. The department has an infrastructure of six computer labs equipped with latest computers and software under high speed network having internet connectivity, high-tech class rooms, library, an exclusive project lab, etc. The department also runs M. Tech (Computer Science &amp; Engineering) and Doctoral degree programs. More than 100 research papers have been published by the department faculties in the international journals and conference proceedings. These papers were presented in USA, China, Singapore, and Thailand. The student projects have obtained recognition by the leading Software Industries, IISc and other institutions. The department is a member of CSI, India. </p>
+<p></p>
+</div>
+<div class="tab" id="tab6-content">
+	<p></p>
+<h2>Contact us</h2>
+<p> </p>
+<p>If you have any queries, you can always <a href="#" onclick="$('html, body').animate({scrollTop: $('#contact').offset().top-50}, 500);">contact us</a> using the form below. Alternatively, you can contact the <a href="#" onclick="showTab('4'); $('html, body').animate({scrollTop: $('#coordinators').offset().top-150}, 500);">event coordinators</a>.</p>
+<h3>Contact us form</h3>
+<p></p>
+<form id="contact">
+<div class="form-wrapper">
+
+
+    <input type="hidden" name="action" value="contact" />
+   <div class="ipholder"> <label for="name">Name</label><input type="text" id="c_name" name="name" class="ipbox" placeholder="Please enter your name here"></div><br />
+   <div class="ipholder"> <label for="email">E-mail</label><input type="text" id="c_email" name="email" class="ipbox" placeholder="Please enter your email here"></div><br />
+    <div class="ipholder"> <label for="message">Message</label><textarea id="c_message" name="message" rows="5" cols="25" placeholder="Please enter your message here" class="ipbox"></textarea></div><br />
+    <div class="ipholder"><button type="submit" id="c_button" class="submitButton" onclick="contact(); return false;">Submit</button></div><br />
+    
+
+   
+</div>
+</form>
+
+
+</div>
+
+
+<script>
+	$(document).ready(function(){
+	$(".tab-title").click(function(){
+		if($(this).hasClass("tab-title-active")) return;
+			$(".tab").hide(350);
+  			$("#"+$(this).attr("id")+"-content").show(350);
+  			$(".tab-title").removeClass("tab-title-active");
+  			$(this).addClass("tab-title-active");
+  		});
+
+	$("#tab1-content").show(350);
+
+	$('#news').list_ticker({
+			speed:10000,
+			effect:'slide'
+		});
+
+
+	$(".ipbox").focus(function(){
+		$(this).removeClass("redShadow");
+	});
+
+	$("#tab1").addClass("tab-title-active");
+
+	$('#coin-slider').coinslider({ width: 700, height: 350, navigation: true, delay: 5000, opacity: 0.7, effect: 'random' });
+	$('#coin-slider-bit').coinslider({ width: 554, height: 341, navigation: true, delay: 5000, opacity: 0.7, effect: 'random' });
+
+  });
+
+
+	function showTab(tabid){
+			if($("#tab"+tabid).hasClass("tab-title-active")) return;
+			$(".tab").hide(350);
+  			$("#"+$("#tab"+tabid).attr("id")+"-content").show(350);
+  			$(".tab-title").removeClass("tab-title-active");
+  			$("#tab"+tabid).addClass("tab-title-active");
+	}
+
+
+function validateForm(){
+	var valid=1;
+
+	if($("#regSubmit").text()=="Submit"){
+
+		$( "#register .ipbox" ).each(function( index ) {
+			if($(this).val().length==0){
+				
+				$(this).addClass("redShadow");
+				var s = $(this).offset().top - 150;
+				$("html, body").animate({
+                    scrollTop: s
+                     }, 500);
+				
+				//$(this).attr("data-default",$(this).width());
+				//$(this).width(350);
+				$( this).parent().effect("shake", {distance: 50, times: 5}, 3000);
+				//$(this).width($(this).attr("data-default"));
+				valid=0;
+				return false;			
+			}
+
+		});
+
+		if(valid==1){
+		var re_contact = /^[0-9]{5,}/;
+		var re_email = /.*?@.*?\..*?/;
+		var re_ddamount = /[0-9]+/;
+		var re_dddate = /[0-9]+\/[0-9]+\/[0-9]+/;
+		if(!re_contact.test($("#phone").val())){
+			alert("Please enter a valid phone number.")
+			shakify("phone");
+			valid=0;
+			return false;
+		}
+
+		if(!re_email.test($("#email").val())){
+			alert("Please enter a valid email.")
+			shakify("email");
+			valid=0;
+			return false;
+		}
+		if(!re_ddamount.test($("#ddamount").val())){
+			alert("Please the DD amount correctly in rupees.")
+			shakify("ddamount");
+			valid=0;
+			return false;
+		}
+
+		if(!re_dddate.test($("#dddate").val())){
+			alert("Please enter the DD date correctly as DD/MM/YYYY")
+			shakify("dddate");
+			valid=0;
+			return false;
+		}
+
+		if(valid==1){
+				$( ".ipbox" ).removeClass("redShadow");
+				jsonGet();
+				$("#regSubmit").text("Submitting..");
+		}
+	}
+	}
+}
+
+function contact(){
+	var valid=1;
+
+	if($("#c_button").text()=="Submit"){
+		$( "#contact .ipbox" ).each(function( index ) {
+			if($(this).val().length==0){
+				
+				$(this).addClass("redShadow");
+				var s = $(this).offset().top - 150;
+				$("html, body").animate({
+                    scrollTop: s
+                     }, 500);
+				$( this).parent().effect("shake", {distance: 50, times: 5}, 3000);
+				valid=0;
+				return false;			
+			}
+
+		});
+
+
+
+		if(valid==1){
+				$( ".ipbox" ).removeClass("redShadow");
+				jsonContact();
+				$("#c_button").text("Submitting..");
+		}
+	}
+}
+
+
+function jsonGet() {
+
+
+        $.ajax({
+            type: "GET",
+            url: "https://script.google.com/macros/s/AKfycbxeHCUSmhHzHTteaDyC2Q4ZkWq3hwQhqLyx1qbN-GFq-dhPyyA/exec?prefix=process&"+$("#register").serialize(),
+            dataType: "jsonp",
+            contentType: "application/json; charset=utf-8",
+            crossDomain: true,
+            success: function (response) {
+                process(response)
+                
+
+            }
+        });
+    
+ }   
+
+
+    function jsonContact() {
+        $.ajax({
+            type: "GET",
+            url: "https://script.google.com/macros/s/AKfycbxeHCUSmhHzHTteaDyC2Q4ZkWq3hwQhqLyx1qbN-GFq-dhPyyA/exec?prefix=process&"+$("#contact").serialize(),
+            dataType: "jsonp",
+            success: function (response) {
+                process(response)
+                
+
+            },
+        });
+    } 
+
+
+    function process(response){
+
+	$("#regSubmit").text("Submit");
+    	if(response=="PHONE_PRESENT"){
+    		alert("Phone already registered");
+    		shakify("phone");
+    	}
+
+    	if(response=="EMAIL_PRESENT"){
+    		alert("E-mail is already registered. Please use another E-mail.");
+    		shakify("email");
+    	}
+
+    	if(response=="OK_REGISTERED"){
+    		alert("Congratulations! You have been successfully registered. Please check your mail inbox for a confirmation mail.");
+    		$( "#register .ipbox" ).val("");
+    	}
+
+    	if(response=="OK_CONTACT"){
+    		alert("Your message has been submitted. We will get in touch with you as soon as possible.");
+    		$( "#contact .ipbox" ).val("");
+    		$("#c_button").text("Submit");
+    	}
+
+    	
+
+    }
+
+function shakify(str){
+	$("#"+str).addClass("redShadow");
+    		var s = $("#"+str).offset().top - 150;
+				$("html, body").animate({
+                    scrollTop: s
+                     }, 500);
+    		$("#"+str).parent().effect("shake", {distance: 50, times: 5}, 3000);
+}
+
+function getData(url){
+   if(url.match('^http')){
+     $.get(url,
+      function(data){
+        $(".college-holder").html(data);
+      }//end function(data)
+     );//end get
+   } 
+}
+
+
+	$(window).resize(function() {
+  		if($(window).width()<800){
+  			
+  			
+  		}
+  		else{
+  			
+  		}
+	});
+
+
+  		
+</script>
+
+
+<div class="lower-decor-1"></div>
+<div class="lower-decor-2"></div>
+</div>
+
+</div>
+
+
+
+</body>
+
+
+
+</html>
+
+
